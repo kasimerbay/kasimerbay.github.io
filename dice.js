@@ -62,8 +62,8 @@ function oyna(){
         skor2++;
     }
     
-    document.getElementById("resim1").innerHTML = `<img class="card-img" src="/assets/images/zar/zar-${sayi1}.png" alt="">`
-    document.getElementById("resim2").innerHTML = `<img class="card-img" src="/assets/images/zar/zar-${sayi2}.png" alt="">`
+    document.getElementById("resim1").innerHTML = `<img class="card-img" src="/zar/zar-${sayi1}.png" alt="">`
+    document.getElementById("resim2").innerHTML = `<img class="card-img" src="/zar/zar-${sayi2}.png" alt="">`
 
     document.getElementById("skor1").innerText = skor1;
     document.getElementById("skor2").innerText = skor2;
