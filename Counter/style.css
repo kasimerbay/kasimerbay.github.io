@@ -1,0 +1,127 @@
+/* 
+
+<style>
+    * {
+        font-family: monospace;
+    }
+
+    h2,
+    h3,
+    p {
+        color: rgb(39, 76, 119);
+    }
+
+    .card,
+    #number-frame {
+        background-color: rgb(231, 236, 239);
+        border: none;
+    }
+
+    .card-header {
+        border: none;
+    }
+
+    #button {
+        background-color: rgb(163, 206, 241);
+        border: none;
+    }
+</style>
+*/
+
+
+* {
+    font-family: monospace;
+}
+
+h2,
+h3,
+p {
+    color: rgb(39, 76, 119);
+}
+
+.card,
+#number-frame {
+    background-color: rgb(231, 236, 239);
+}
+
+.card-header {
+    border: none;
+}
+
+.card-footer{
+    border-top: none;
+}
+
+#button {
+    background-color: rgb(163, 206, 241);
+    border: none;
+    animation: pulse-bg 20s infinite;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #222;
+}
+
+.card {
+    border: 2px solid;
+    /* add a solid border to the card */
+    animation: pulse-border 20s infinite;
+    /* apply the pulse-border animation */
+}
+
+@keyframes pulse-border {
+    0% {
+        border-color: #000501;
+    }
+
+    20% {
+        border-color: #73AB84;
+    }
+
+    40% {
+        border-color: #99D19C;
+    }
+
+    60% {
+        border-color: #79C7C5;
+    }
+
+    80% {
+        border-color: #ADE1E5;
+    }
+
+    100% {
+        border-color: #EFF7CF;
+    }
+}
+
+@keyframes pulse-bg {
+    0% {
+        background-color: #000501;
+        color: white;
+    }
+
+    20% {
+        background-color: #73AB84;
+    }
+
+    40% {
+        background-color: #99D19C;
+    }
+
+    60% {
+        background-color: #79C7C5;
+    }
+
+    80% {
+        background-color: #ADE1E5;
+    }
+
+    100% {
+        background-color: #EFF7CF;
+    }
+}
