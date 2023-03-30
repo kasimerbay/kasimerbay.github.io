@@ -18,7 +18,7 @@ p {
 }
 
 body #back{
-    background: url('/Counter/cim.jpg');
+    background: url('/Counter/cim.jpg') no-repeat center center fixed;
     background-size:cover;
     
 }
