@@ -9,7 +9,7 @@ p {
 
 .card,
 #number-frame {
-    background-color: rgba(231, 236, 239, 0.6);
+    background-color: rgba(231, 236, 239, 0.5);
     animation: shadow-bg 20s infinite;
 }
 
@@ -18,7 +18,7 @@ p {
 }
 
 body #back{
-    background: url('/Counter/cim.jpg') no-repeat center center fixed;
+    background: url('/Counter/background.jpg') no-repeat center center fixed;
     background-size:cover;
     
 }
