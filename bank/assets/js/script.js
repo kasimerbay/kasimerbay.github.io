@@ -325,7 +325,7 @@ function activity(){
             const td1 = document.createElement("td");
             const td2 = document.createElement("td");
             td1.innerText = loggedUser.Id;
-            td2.innerText = `${activities[i].split("_")[0]} to ${activities[i].split("_")[1]}`;
+            td2.innerText = Number(activities[i].split("_")[0])>0?`${activities[i].split("_")[0]} from ${activities[i].split("_")[1]}`:`${activities[i].split("_")[0]} to ${activities[i].split("_")[1]}`;
             row.appendChild(td1);
             row.appendChild(td2);
             acc_table.appendChild(row);
