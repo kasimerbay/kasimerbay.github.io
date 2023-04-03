@@ -114,8 +114,6 @@ function sign(){
     var id = document.getElementById("Id").value;
     var password = document.getElementById("password").value;
 
-    var ids = [];
-
     customerList.forEach((c)=>{
         ids.push(c.Id);
     })
@@ -172,6 +170,8 @@ function login(){
 function logout(){
     hide([user_card_container]);
     displayer([login_container, signup]);
+
+    user_header_username.innerText = "";
 
     for(let i of customerList){
         if(loggedUser.Id == i.Id){
@@ -380,24 +380,16 @@ function back(){
 }
 
 let admin_p = new Customer("admin","admin", "12345", "12345", 1000);
-let erhan = new Customer("Erhan", "Canımhocam", "123456", "123456", 10000);
-let kasim = new Customer("Ahmet Kasım", "Erbay", "1234567", "1234567", 1000);
+let erhan = new Customer("Erhan", "Canımhocam", "123456", "123456", 100000);
+let kasim = new Customer("Ahmet Kasım", "Erbay", "1", "1", 1000);
 
 var customerList = [admin_p, erhan, kasim];
 
-// var customerList = [
-//     {Name:"admin", Surname:"admin", Id:"12345", Password:"12345", Balance:1000},
-//     {Name:"Erhan", Surname:"Canımhocam", Id:"123456", Password:"123456", Balance:10000},
-//     {Name:"Ahmet Kasım", Surname:"Erbay", Id:"1234567", Password:"1234567", Balance:1000}
-// ];
-
 var updateBool = false;
 var updateBoolDraft = false;
-// var customerList = [];
-var loggedUser = {
-    Name:"Kasım", Surname:"Erbay", Id:"12345", Password:"12345", Balance:20
-};
+var loggedUser = {};
 var otherUser;
+var ids = [];
 
 var activities = {"id":"+-amount_ToUserId"};
 var acc_counter = 0;
@@ -457,12 +449,10 @@ const user_table_withdraw = document.getElementById("table-button-withdraw");
 const user_table_send = document.getElementById("table-button-send");
 
 // acc table
-
 const acc_table = document.getElementById("acc-table");
 
 // admin table
 const admin_table = document.getElementById("admin-table");
-
 
 hide([button_back, user_card_container, button_container, user_acc_container, admin_card_body]);
 
@@ -488,10 +478,21 @@ user_table_withdraw.addEventListener("click", (e)=>{
 
 user_table_update.addEventListener("click",(e)=>{
     e.preventDefault();
-    loggedUser.Name = document.getElementById("input-name").value;
-    loggedUser.Surname = document.getElementById("input-surname").value;
-    loggedUser.Id = document.getElementById("input-id").value;
-    loggedUser.Password = document.getElementById("input-password").value;
+
+    const input_name = document.getElementById("input-name").value;
+    const input_surname = document.getElementById("input-surname").value;
+    const input_id = document.getElementById("input-id").value;
+    const input_password = document.getElementById("input-password").value;
+
+    console.log(loggedUser);
+    loggedUser.Name = input_name;
+    loggedUser.Surname = input_surname;
+    loggedUser.Id = input_id
+    loggedUser.Password = input_password;
+
+    customerList.forEach((c)=>{
+        ids.push(c.Id);
+    })
 
     user_header_username.innerText = loggedUser.Name;
 })
