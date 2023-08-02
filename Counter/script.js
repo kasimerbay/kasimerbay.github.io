@@ -28,10 +28,9 @@ document.getElementById("sec").innerHTML = seconds
 // Display the message when countdown is over
 if (timeleft < 0) {
     clearInterval(myfunc);
-    document.getElementById("days").innerHTML = ""
-    document.getElementById("hours").innerHTML = "" 
-    document.getElementById("mins").innerHTML = ""
-    document.getElementById("secs").innerHTML = ""
-    document.getElementById("end").innerHTML = "TIME UP!!";
+    document.getElementById("day").innerHTML = "Are"
+    document.getElementById("hour").innerHTML = "You" 
+    document.getElementById("min").innerHTML = "Ready"
+    document.getElementById("sec").innerHTML = "To Wed?"
 }
 }, 1000);
