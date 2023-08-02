@@ -19,7 +19,7 @@ p {
 }
 
 body #back{
-    background: url('../counter/img/background.jpg') no-repeat center center fixed;
+    background: url('/counter/img/background.jpg') no-repeat center center fixed;
     background-size:cover;
     
 }
