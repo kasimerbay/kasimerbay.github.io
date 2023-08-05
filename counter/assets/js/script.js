@@ -3,15 +3,12 @@ var countDownDate = new Date("Oct 28, 2023 19:00:00").getTime();
 
 var date = new Date();
 
-console.log(date);
-
 // Run myfunc every second
 var myfunc = setInterval(function() {
 
 var now = new Date().getTime();
 var timeleft = countDownDate - now;
 
-console.log(timeleft);
     
 // Calculating the days, hours, minutes and seconds left
 var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
