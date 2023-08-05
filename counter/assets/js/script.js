@@ -20,7 +20,7 @@ document.getElementById("day").innerHTML = days
 document.getElementById("hour").innerHTML = hours 
 document.getElementById("min").innerHTML = minutes
 document.getElementById("sec").innerHTML = seconds
-   
+
 // Display the message when countdown is over
 if (timeleft < 0) {
     clearInterval(myfunc);
