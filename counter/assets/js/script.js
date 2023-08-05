@@ -5,7 +5,7 @@ var date = new Date();
 
 // Run myfunc every second
 var myfunc = setInterval(function() {
-s
+
 var now = new Date().getTime();
 var timeleft = countDownDate - now;
 
